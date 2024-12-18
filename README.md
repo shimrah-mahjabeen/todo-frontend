@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Todo Frontend
+This is a frontend application built using Next.js. It includes React, Tailwind CSS, Axios, and other tools to help build a modern and efficient todo application.
 
-## Getting Started
+## Features
+React for building UI components.
+Next.js for server-side rendering and static site generation.
+Tailwind CSS for rapid UI styling.
+Axios for handling HTTP requests.
+React Icons for easily using icons in your app.
+Requirements
+Before starting, ensure you have the following installed:
 
-First, run the development server:
+- Node.js (v18 or higher recommended)
+- npm (v9 or higher) or Yarn (optional)
+## Installation
+ Clone the repository:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Copy code
+`git clone <repository-url>`
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+`cd todo-frontend`
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Install dependencies:
 
-## Learn More
+Copy code
+`npm install`
+1. Start Development Server
 
-To learn more about Next.js, take a look at the following resources:
+Runs the application in development mode with Turbopack for fast updates.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+bash
+`npm run dev`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Open http://localhost:3000 to view it in the browser.
 
-## Deploy on Vercel
+2. Build for Production
+Builds the application for production.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+bash
+`npm run build`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+3. Start Production Server
+Starts the production server after building the application.
+
+bash
+`npm run start`
+
+Open http://localhost:3000 to view the production app.
+
+4. Run Linter
+Lints your code for errors and warnings based on the Next.js ESLint configuration.
+
+bash
+`npm run lint`
+## Styling with Tailwind CSS
+This project uses Tailwind CSS for styling. To customize styles:
+
+Edit the tailwind.config.js file for theme or plugin changes.
+Use Tailwind classes in your components for styling.
+Tech Stack
+Next.js v15.1.1
+React v19.0.0
+TypeScript (Optional, included as a dev dependency)
+Tailwind CSS
+Axios
