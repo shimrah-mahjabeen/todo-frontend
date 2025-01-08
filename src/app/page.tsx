@@ -9,6 +9,7 @@ import TaskBoard from "@/components/TaskBoard";
 import { Task } from "@/types/task";
 import API_BASE_URL from "@/config";
 import { PlusIcon } from "@/icons";
+import SearchBar from "@/components/SearchBar";
 
 export default function HomePage() {
   const [tasks, setTasks] = useState<Task[]>([]);
@@ -52,6 +53,15 @@ export default function HomePage() {
     }
   };
 
+  const searchTasks = async (searchText: string) => {
+    try {
+      const response = await axios.get(`${API_BASE_URL}/search?query=${searchText}`);
+      setTasks(response.data);
+    } catch (error) {
+      console.error("Error searching tasks:", error);
+    }
+  };
+
   const handleCreateTask = () => {
     router.push("/create"); // Navigate to the create-task page
   };
@@ -64,6 +74,7 @@ export default function HomePage() {
         icon={<PlusIcon />}
         // className="mb-6"
       />
+      <SearchBar searchTasks={searchTasks} />
       <TaskBoard tasks={tasks} onToggle={toggleTask} onDelete={deleteTask} />
     </>
   );
